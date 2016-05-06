@@ -1,0 +1,24 @@
+html, body {
+    @extend %reset; 
+}
+
+body {
+    > .wrapper{
+        > header, > main > section, > footer {
+            @extend %reset;
+            height:50vH;
+            background: #eee;
+            @include align-items(center);
+            @include display(flex);
+            @media screen and (max-width:$screen-md){@include flex-direction(column);}
+            @media screen and (min-width:$screen-md){@include flex-direction(row);}
+            
+            @include justify-content(flex-start);
+            > div {
+                @include flex(1);
+                text-align: center;
+            }
+        }
+    }
+}
+
