@@ -27,7 +27,8 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
+    add_image_size('x-large', 1600, 950, true); // Large Thumbnail
+    add_image_size('large', 800, 475, true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
@@ -39,17 +40,20 @@ if (function_exists('add_theme_support'))
     ));
 
     // Add Support for Custom Header - Uncomment below if you're going to use
-    add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1440,
-	'height'			=> 855,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
-    ));
+//    add_theme_support('custom-header', array(
+//	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
+//        'uploads'                       => true,
+//	'header-text'			=> false,
+//	'default-text-color'		=> '000',
+//	'width'				=> 1440,
+//	'height'			=> 855,
+//        'flex-height'                   => true,
+//	'flex-width'                    => true,
+//	'random-default'		=> true,
+//	'wp-head-callback'		=> $wphead_cb,
+//	'admin-head-callback'		=> $adminhead_cb,
+//	'admin-preview-callback'	=> $adminpreview_cb
+//    ));
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');

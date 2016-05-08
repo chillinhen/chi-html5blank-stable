@@ -1,0 +1,59 @@
+/** LOGO **/
+h1.logo {
+    margin:0;
+    line-height:0;
+    img {
+        min-width: 300px;
+        @media screen and (min-width:$screen-md){
+            margin:0 10vW; 
+        }  
+    }
+}
+/** Flexslider **/
+.flexslider{
+    margin:0;
+    background: transparent;
+    border:0;
+    text-align: center;
+}
+.flex-direction-nav{
+    a[class*="flex"]{
+        top:30%;
+    }
+    .flex-prev{
+        left:0;
+    }
+    .flex-next{
+        right:0;
+    }
+}
+/*** Teaser ***/
+.teaser{
+    @include align-items(stretch);
+    @include display(flex);
+    @include flex-direction(column);
+    padding:10vH 0;
+    > * {
+        @include flex(1);
+        margin:0 5px;
+    }
+    img {
+        height:10vH;
+        margin:0 auto;
+    }
+    a{
+        color:grey;
+        text-decoration: none;
+    }
+}
+
+.dashicons{
+    display:block;
+    text-align:center;
+    width:inherit;
+    &:before {
+        font-size: 5vW;
+        width:5vW;
+        height: 5vW;
+    }
+}

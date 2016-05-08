@@ -28,9 +28,104 @@ $footerHomeHeight:87px;
 
 $mobileHeaderHeight:40px;
 $headerBorderWidth:4px;*/
+::-moz-selection {
+  background-color: #ffbb52;
+  text-shadow: none; }
+
+::selection {
+  background-color: #ffbb52;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #666;
+  margin: 20px 0;
+  padding: 0; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+div:not(.teaser) img {
+  max-width: 100%; }
+
 body > .wrapper > header, body > .wrapper > main > section, body > .wrapper > footer {
   height: 50vH;
   background: #eee;
+  border: 1px dashed orange !important;
   -webkit-box-align: center;
   -moz-box-align: center;
   box-align: center;
@@ -46,16 +141,7 @@ body > .wrapper > header, body > .wrapper > main > section, body > .wrapper > fo
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  box-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
-  -ms-flex-pack: start; }
+  display: flex; }
   @media screen and (max-width: 992px) {
     body > .wrapper > header, body > .wrapper > main > section, body > .wrapper > footer {
       -webkit-box-orient: vertical;
@@ -67,7 +153,16 @@ body > .wrapper > header, body > .wrapper > main > section, body > .wrapper > fo
       -webkit-flex-direction: column;
       -moz-flex-direction: column;
       flex-direction: column;
-      -ms-flex-direction: column; } }
+      -ms-flex-direction: column;
+      -webkit-box-pack: end;
+      -moz-box-pack: end;
+      box-pack: end;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
+      -ms-justify-content: flex-end;
+      -o-justify-content: flex-end;
+      justify-content: flex-end;
+      -ms-flex-pack: end; } }
   @media screen and (min-width: 992px) {
     body > .wrapper > header, body > .wrapper > main > section, body > .wrapper > footer {
       -webkit-box-orient: horizontal;
@@ -79,8 +174,109 @@ body > .wrapper > header, body > .wrapper > main > section, body > .wrapper > fo
       -webkit-flex-direction: row;
       -moz-flex-direction: row;
       flex-direction: row;
-      -ms-flex-direction: row; } }
-  body > .wrapper > header > div, body > .wrapper > main > section > div, body > .wrapper > footer > div {
+      -ms-flex-direction: row;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; } }
+  body > .wrapper > header > *, body > .wrapper > main > section > *, body > .wrapper > footer > * {
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%; }
+  body > .wrapper > header#intro .banner-img, body > .wrapper > main > section#intro .banner-img, body > .wrapper > footer#intro .banner-img {
+    -webkit-flex-basis: 75%;
+    -moz-flex-basis: 75%;
+    flex-basis: 75%;
+    -ms-flex-preferred-size: 75%; }
+  body > .wrapper > header#intro .banner-text, body > .wrapper > main > section#intro .banner-text, body > .wrapper > footer#intro .banner-text {
+    -webkit-flex-basis: 25%;
+    -moz-flex-basis: 25%;
+    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%; }
+  body > .wrapper > header#teaser, body > .wrapper > main > section#teaser, body > .wrapper > footer#teaser {
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch; }
+    body > .wrapper > header#teaser > *, body > .wrapper > main > section#teaser > *, body > .wrapper > footer#teaser > * {
+      text-align: center; }
+    body > .wrapper > header#teaser .teaser, body > .wrapper > main > section#teaser .teaser, body > .wrapper > footer#teaser .teaser {
+      background: #fff; }
+
+/** Typo **/
+.titles h1, .titles h2, .titles h3, .titles h4 {
+  text-transform: uppercase;
+  margin: 0 1.5em;
+  line-height: 1.2; }
+.teaser h1, .teaser h2, .teaser h3, .teaser h4 {
+  font-weight: normal;
+  font-size: large; }
+
+/** LOGO **/
+h1.logo {
+  margin: 0;
+  line-height: 0; }
+  h1.logo img {
+    min-width: 300px; }
+    @media screen and (min-width: 992px) {
+      h1.logo img {
+        margin: 0 10vW; } }
+
+/** Flexslider **/
+.flexslider {
+  margin: 0;
+  background: transparent;
+  border: 0;
+  text-align: center; }
+
+.flex-direction-nav a[class*="flex"] {
+  top: 30%; }
+.flex-direction-nav .flex-prev {
+  left: 0; }
+.flex-direction-nav .flex-next {
+  right: 0; }
+
+/*** Teaser ***/
+.teaser {
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  padding: 10vH 0; }
+  .teaser > * {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     box-flex: 1;
@@ -88,9 +284,21 @@ body > .wrapper > header, body > .wrapper > main > section, body > .wrapper > fo
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    text-align: center; }
+    margin: 0 5px; }
+  .teaser img {
+    height: 10vH;
+    margin: 0 auto; }
+  .teaser a {
+    color: grey;
+    text-decoration: none; }
 
-.logo img {
-  margin: 0 10vW; }
+.dashicons {
+  display: block;
+  text-align: center;
+  width: inherit; }
+  .dashicons:before {
+    font-size: 5vW;
+    width: 5vW;
+    height: 5vW; }
 
 /*# sourceMappingURL=my-styles.css.map */

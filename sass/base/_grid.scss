@@ -1,0 +1,45 @@
+html, body {
+    @extend %reset; 
+}
+body {
+    > .wrapper{
+        > header, > main > section, > footer {
+            @extend %reset;
+            height:50vH;
+            background: #eee;
+            border:1px dashed orange !important;  
+            @include align-items(center);
+            @include display(flex);
+             @media screen and (max-width:$screen-md){
+                 @include flex-direction(column);
+                 @include justify-content(flex-end);
+             }
+            @media screen and (min-width:$screen-md){
+                @include flex-direction(row);
+                 @include justify-content(center);
+            }
+           
+            > * {
+                @include flex-basis(50%);
+                
+            }
+            &#intro{
+                .banner-img {
+                    @include flex-basis(75%);
+                }
+                .banner-text{
+                    @include flex-basis(25%);
+                }
+            }
+            &#teaser{
+                @include align-items(stretch);
+                > *{
+                    text-align: center;
+                }
+                .teaser{
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

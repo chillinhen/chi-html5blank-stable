@@ -1,0 +1,12 @@
+/** Typo **/
+h1,h2,h3,h4 {
+    .titles &{
+        text-transform: uppercase;
+        margin:0 1.5em;
+        line-height: 1.2;
+    }
+    .teaser & {
+        font-weight: normal;
+        font-size: large;
+    }
+}
