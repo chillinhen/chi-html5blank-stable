@@ -8,7 +8,7 @@ if( have_rows('header-slide') ): ?>
     while ( have_rows('header-slide') ) : the_row();?>
 
         <!--display a sub field value-->
-        <li><h2><?php the_sub_field('header-text');?></h2></li>
+        <li><?php the_sub_field('header-text');?></li>
 
     <?php endwhile;
 

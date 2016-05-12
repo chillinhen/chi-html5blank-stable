@@ -25,9 +25,15 @@
 <?php get_template_part('partials/teaser'); ?>
 <!-- /Teaser -->
 <!-- Portfolio -->
-<?php #get_template_part('partials/portfolio', 'home'); ?>
-<!-- /Teaser -->
-
+<?php get_template_part('partials/portfolio', 'latest'); ?>
+<?php get_template_part('partials/portfolio', 'featured'); ?>
+<!-- /Portfolio -->
+<!-- Call to Action Section -->
+<?php get_template_part('partials/call-to-action');?>
+<!-- /Call to Action Section -->
+<!-- Recommends -->
+<?php get_template_part('partials/recommends');?>
+<!-- /Recommends -->
 <?php get_footer(); ?>
 
 

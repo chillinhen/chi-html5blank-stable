@@ -29,31 +29,126 @@ h1.logo {
 }
 /*** Teaser ***/
 .teaser{
-    @include align-items(stretch);
     @include display(flex);
     @include flex-direction(column);
-    padding:10vH 0;
+     @include align-items(stretch);
+      padding:10vH 0;
+
     > * {
         @include flex(1);
         margin:0 5px;
     }
-    img {
+       img {
         height:10vH;
         margin:0 auto;
     }
     a{
         color:grey;
         text-decoration: none;
+        &:before{
+            @include icon-style ("\f055", 0, 1, 0, 2em);
+        }
+        span{display: none;}
+    }
+}
+.call-to-action{
+/*    @include justify-content(center);
+    @include align-items(center);*/
+    .badge{
+        @include ctaBadge(200px);
+        margin:auto auto;
+        background: white;
+        span {display: block;}
+        @include shadow;
+        
+        a {
+            text-decoration: none;
+            display: block;
+            color:grey;
+            font-size:1.4em;
+            padding:.6em 0;
+            span {
+                font-family: $headings-font-family;
+            }
+            span:first-child{
+                color:$base-color-grey;
+                font-size: 1.6em;
+            }
+            span:nth-child(2){
+                text-transform: uppercase;
+                color:$primary-color;
+                font-size: 1.8em;
+                line-height: 1;
+            }
+            span:last-child{
+                color:$dark-color-grey;
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+.cta-section{
+    .thumbnail{
+        text-align: center;
+    }
+}
+.contact{
+    background: $base-color-white;
+    .avatar{
+        margin:0 2em .2em 2em;
+    }
+    p{
+        padding:.5em 2em;
+    }
+    
+}
+
+.social-media{
+    text-align:justified;
+    padding:0 2em;
+    li{
+        list-style:none;
+        display:inline-block;
+        margin:0 .5em;
+        a{
+            color:$primary-color;
+            text-decoration:none;
+            &:before{
+                @include icon-style ("\f08e", 0, 1, 0, 2em);
+            }
+            span{
+                display:none;
+            }
+        }
+        &.email a:before{content: "\f0e0";}
+        &.xing a:before{content: "\f168";}
+        &.linkedin a:before{content: "\f0e1";}
+        &.vcard a:before{content: "\f15c";}
+        
+        &:first-child{margin-left: 0;}
+        &:last-child{margin-right: 0;}
     }
 }
 
-.dashicons{
-    display:block;
-    text-align:center;
-    width:inherit;
-    &:before {
-        font-size: 5vW;
-        width:5vW;
-        height: 5vW;
+.portfolio-item{
+    background: $primary-color;
+    * {color:lighten($primary-color,100%);}
+    &.latest{
+        button{
+            background: transparent;
+            border:0;
+            display: block;
+            a{
+                text-decoration: none; 
+                > * {
+                    vertical-align: middle;
+                    display: inline-block;
+                    height: 2em;
+                }
+            }
+            a:after{
+                @include icon-style ("\f00a", 0, 1, .5em, 2em);
+            }
+        }
     }
 }
