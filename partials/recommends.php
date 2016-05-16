@@ -5,12 +5,12 @@ $filter = array(
     'post_status' => 'publish',
     'posts_per_page' => -1,
     'orderby' => 'date',
-    'order' => 'DESC',
+    'order' => 'ASC',
 );
 $recommendsQuery = new WP_Query($filter);
 ?>
 <?php if ($recommendsQuery->have_posts()): ?>
-    <div id="recommends" class="flexslider">
+    <section id="recommends" class="flexslider">
             <ul class="slides">
                 <?php while ($recommendsQuery->have_posts()) : $recommendsQuery->the_post(); ?>
                 <li>
@@ -22,5 +22,5 @@ $recommendsQuery = new WP_Query($filter);
                 wp_reset_postdata();
                 ?>
             </ul>
-    </div>
+    </section>
 <?php endif; ?>

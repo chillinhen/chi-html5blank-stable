@@ -33,7 +33,7 @@ if (function_exists('add_theme_support'))
     add_image_size('large', 800, 475, true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('custom-size', 700, '', true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     add_theme_support('custom-background', array(
@@ -140,6 +140,10 @@ function html5blank_styles()
     wp_enqueue_style('normalize'); // Enqueue it!
      wp_register_style('flexslider',get_stylesheet_directory_uri().'/flexslider/flexslider.css',array(),false,'screen');
         wp_enqueue_style('flexslider');
+        
+        wp_register_style('googlefonts', 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,400italic,700italic,700', 'style', array(),'', 'all');
+        wp_enqueue_style('googlefonts'); // Enqueue it!
+        
         wp_register_style('fontawseome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css', 'style', array(),'4.6.2', 'all');
         wp_enqueue_style('fontawseome'); // Enqueue it!
     wp_register_style('my-styles', get_template_directory_uri() . '/css/my-styles.css', array('flexslider', 'fontawseome'), '1.0', 'all');

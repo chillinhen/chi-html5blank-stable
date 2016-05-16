@@ -45,6 +45,8 @@ textarea {
 .hidden {
     display: none !important;
 }
+
+
 /*
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -92,7 +94,8 @@ textarea {
     clear: both;
 }
 img {
+	max-width: 100%;
     div:not(.teaser) &{
-        max-width: 100%;
+        
     }
 }

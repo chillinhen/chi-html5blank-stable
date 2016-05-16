@@ -1,0 +1,37 @@
+.wrapper{
+/*	> header{
+		border:3px dotted brown !important;
+	}
+	> main > section{
+	
+		&#intro{
+			border:3px dotted red !important;
+		}
+		
+		&#teaser{
+			border:3px dotted blue !important;
+		}
+		
+		&#latest{
+			border:3px dotted yellow !important;
+		}
+		
+		&#featured{
+			border:3px dotted pink !important;
+		}
+		
+		&#contact{
+			border:3px dotted cyan !important;
+		}
+		
+		&#recommends{
+			border:3px dotted green !important;
+		}
+	}
+	> footer {
+		border:3px dotted violet !important;
+	}*/
+	> header, > main > section, > footer{
+		/*> * {border:3px dotted red !important;}*/
+	}
+}
