@@ -19,20 +19,27 @@ h1.logo {
 
 /** Flexslider **/
 .flexslider{
-    margin:0;
     background: transparent;
     border:0;
     text-align: center;
 }
 .flex-direction-nav{
+	margin: 0 2em;
     a[class*="flex"]{
-        top:30%;
+    	text-decoration: none;
+    	font-size: 0;
+        &:before{
+        	text-shadow: none;
+        	@include size(50px);
+        	font-size: 20px;
+        	margin:0;
+        }
     }
     .flex-prev{
-        left:0;
+        left:2em;
     }
     .flex-next{
-        right:0;
+        right:2em;
     }
 }
 
@@ -112,22 +119,20 @@ h1.logo {
 
 .contact{
     background: $base-color-white;
+    padding: 4vW;
     .avatar{
-        /*margin:0 2em .2em 2em;*/
-    }
-    p{
-        /*padding:.5em 2em;*/
+        margin:0 0 2.5vW 0;
     }
 }
 
 .social-media{
 	text-align:justified;
-	/*padding:0 2em;*/
-	
+	margin-top:1em -.5em 0 -.5em;
+	padding: 0;
 	li{
 		list-style:none;
 		display:inline-block;
-		/*margin:0 .5em;*/
+		margin:0 .5em;
 		
 		a{
 			color:$primary-color;
@@ -153,7 +158,7 @@ h1.logo {
 .portfolio-item{
     background: $primary-color;
     * {color:lighten($primary-color,100%);}
-    &.latest{
+    .latest{
         button{
             background: transparent;
             border:0;

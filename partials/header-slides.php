@@ -13,7 +13,7 @@ if( have_rows('header-slide') ): ?>
         <!--display a sub field value-->
         <li>
         	<img src="<?php echo $thumb; ?>" />
-        	<?php the_sub_field('header-text');?>
+        	<h2><?php the_sub_field('header-text');?></h2>
         	
         </li>
 

@@ -66,7 +66,7 @@ html, body {
 	}
 }
 #latest{
-	@include align-items(stretch);
+	@include align-items(flex-end);
 	@media screen and (min-width:$screen-md){
 	min-height:50vH;
 	> .contact{
@@ -74,6 +74,7 @@ html, body {
 		}
 	> .latest{
 		@include flex-basis(75%);
+		@include align-self(flex-end);
 		}
 	}
 	> .latest{

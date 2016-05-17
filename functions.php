@@ -141,8 +141,9 @@ function html5blank_styles()
      wp_register_style('flexslider',get_stylesheet_directory_uri().'/flexslider/flexslider.css',array(),false,'screen');
         wp_enqueue_style('flexslider');
         
-        wp_register_style('googlefonts', 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,400italic,700italic,700', 'style', array(),'', 'all');
+        wp_register_style('googlefonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Nunito,400,300,700', 'style', array(),'', 'all');
         wp_enqueue_style('googlefonts'); // Enqueue it!
+
         
         wp_register_style('fontawseome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css', 'style', array(),'4.6.2', 'all');
         wp_enqueue_style('fontawseome'); // Enqueue it!
