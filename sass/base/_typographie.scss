@@ -4,7 +4,7 @@ $rem-base:                  16px !default;
 
 $paragraph-margin:          1rem;
 
-$headings-font-family:    "Nunito", sans-serif !default;
+$headings-font-family:    "Montserrat", sans-serif !default;
 $body-font-family:        "Open Sans", sans-serif !default;
 
 $heading-text-color:        $dark-color-grey;
@@ -35,14 +35,20 @@ h6{
     @media screen and (min-width:$screen-md){
         margin: 0 0 3 * $paragraph-margin;   
     }
-        .titles &{
-        text-transform: uppercase;
-        margin:0 1.5em;
-        line-height: 1.2;
-    }
+    .titles &{
+    text-transform: uppercase;
+    margin:0 1.5em;
+    line-height: 1.2;
+    font-size: 2vw;
+	}	
     .teaser & {
         font-weight: normal;
         font-size: large;
+        margin: 2em;
+        min-height: 40px;
+    }
+    a{
+    	text-decoration: none;
     }
 
 }

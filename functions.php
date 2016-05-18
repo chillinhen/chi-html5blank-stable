@@ -141,7 +141,7 @@ function html5blank_styles()
      wp_register_style('flexslider',get_stylesheet_directory_uri().'/flexslider/flexslider.css',array(),false,'screen');
         wp_enqueue_style('flexslider');
         
-        wp_register_style('googlefonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Nunito,400,300,700', 'style', array(),'', 'all');
+        wp_register_style('googlefonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Montserrat,400,700', 'style', array(),'', 'all');
         wp_enqueue_style('googlefonts'); // Enqueue it!
 
         

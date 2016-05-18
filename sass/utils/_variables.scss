@@ -1,21 +1,25 @@
 //debugging
 $foo:red;
-$base-color-grey:#a6aebb;
-$dark-color-grey:#535352;
+$base-color-grey:#d3d7dd;
+$dark-color-grey:#494948;
 $base-color-white:#fff;
 $primary-color:#f2bc14;
+$white: #fff;
 
 
 //Base Colors
 $color-bd:#535352;
-$base-bg_color:#eee;
+$base-bg_color:#e9ebee;
 $text-color:#232020;
 
 
 //Grids, Margins and paddings
 
-$vgrid:20px;
-$hgrid:20px;
+$vgrid:2em;
+$hgrid:2em;
+$smallgrid:2px;
+
+
 
 /*$footerHeight:66px;
 $footerHomeHeight:87px;

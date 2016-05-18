@@ -2,7 +2,7 @@
     	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php html5wp_excerpt('html5wp_index'); ?>
         <button class="portfolio-link">
-            <a  href="#"><span><?php _e('show portfolio','html5blank');?></span></a>
+            <a href="#"><span><?php _e('show portfolio','html5blank');?></span></a>
         </button>        
 </article>
 <?php if (has_post_thumbnail()) : ?>

@@ -1,6 +1,5 @@
 html, body {
     @extend %reset;
-    background: #eee;
 }
 .wrapper{
 /*	@media screen and (min-width:$screen-lg + 1){
@@ -11,7 +10,7 @@ html, body {
 		margin: 0 auto;
 	}
 	> header, > main > section:not(#recommends), footer > aside {
-		@extend %reset;
+		/*@extend %reset;*/
 		
 		@media screen and (min-width:$screen-xs + 1){
 			@include display(flex);
@@ -20,14 +19,15 @@ html, body {
 }
 
 .wrapper > header {
-	@include align-items(center);
+	@include align-items(stretch);
 	
 	@media screen and (min-width:$screen-sm){
-		height: 25vH;
+		height: 50vH;
 	}
 	@media screen and (min-width:$screen-xs + 1){
 		> * {
-		    @include flex-basis(50%);   
+		    @include flex-basis(50%); 
+		    @include align-self(center);
 		}
 	}
 	
@@ -42,7 +42,7 @@ html, body {
 /** einzelne sections **/
 #intro{
 	@media screen and (min-width:$screen-md){
-		@include align-items(flex-end);
+		@include align-items(flex-start);
 		
 	    .banner-img {
 	        @include flex-basis(75%);
@@ -62,11 +62,11 @@ html, body {
 	> * {
 	    @include flex-basis(25%);
 	    @include justify-content(center);
-	    @include align-items(center);
+	    @include align-self(center);
 	}
 }
 #latest{
-	@include align-items(flex-end);
+	@include align-items(flex-start);
 	@media screen and (min-width:$screen-md){
 	min-height:50vH;
 	> .contact{

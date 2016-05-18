@@ -4,3 +4,10 @@
 /*    line-height: $item;*/
     @include border-radius ($item/2);
 }
+
+@mixin flex-nav($size){
+	margin:-$size/2 0 0;
+	&:before{
+		font-size: $size;
+	}
+}

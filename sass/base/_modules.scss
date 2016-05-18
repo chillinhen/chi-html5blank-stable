@@ -22,25 +22,22 @@ h1.logo {
     background: transparent;
     border:0;
     text-align: center;
+    .titles & {
+    	margin: 0 2em;
+    }
 }
 .flex-direction-nav{
-	margin: 0 2em;
-    a[class*="flex"]{
-    	text-decoration: none;
-    	font-size: 0;
-        &:before{
-        	text-shadow: none;
-        	@include size(50px);
-        	font-size: 20px;
-        	margin:0;
-        }
-    }
-    .flex-prev{
-        left:2em;
-    }
-    .flex-next{
-        right:2em;
-    }
+	a{
+		text-decoration: none;
+		font-size: 0;
+		@include flex-nav(24px);
+		&:before{
+			text-shadow: none;
+		}
+	}
+}
+.flex-control-paging{
+	.titles & {display: none;}
 }
 
 /*** Teaser ***/
@@ -49,7 +46,6 @@ h1.logo {
 	    text-align: center;
 	}
 	.teaser{
-	    background: #fff;
 	    @include display(flex);
 	    @include flex-direction(column);
 	    padding:10vH 0;
@@ -58,7 +54,6 @@ h1.logo {
 	   > * {
 		   	@include align-self(center);
 		   	@include flex(1);
-		   	margin:0 5px;
 	   	}
 	   	
 	   	img {
@@ -94,7 +89,7 @@ h1.logo {
 			padding:.6em 0;
 			
 			span {
-			    /*font-family: $headings-font-family;*/
+			    font-family: $headings-font-family;
 			}
 			
 			span:nth-child(2){
@@ -119,7 +114,7 @@ h1.logo {
 
 .contact{
     background: $base-color-white;
-    padding: 4vW;
+    padding: 0 4vW;
     .avatar{
         margin:0 0 2.5vW 0;
     }

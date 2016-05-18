@@ -1,4 +1,4 @@
-@import "/Users/chilliscope/Documents/Webseiten/toolbox/bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "/Users/chilliscope/Documents/Webseiten/toolbox/bower_components/bourbon/bourbon";
 @import "/Users/chilliscope/Documents/Webseiten/toolbox/bower_components/neat/app/assets/stylesheets/_neat";
 @import "/Users/chilliscope/Documents/Webseiten/toolbox/sass/myMixins/extends";
 @import "/Users/chilliscope/Documents/Webseiten/toolbox/sass/myMixins/mixins";
@@ -7,9 +7,10 @@
 @import "utils/_variables";
 @import "utils/_mixins";
 @import "utils/_globals";
+@import "base/_typographie";
 @import "base/_grid";
 @import "base/_modules";
-@import "base/_typographie";
+@import "layout/_layout";
 
 @import "_shame";
 @import "_helper";

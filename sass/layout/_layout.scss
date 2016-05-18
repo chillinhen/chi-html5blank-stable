@@ -1,0 +1,26 @@
+html, body {
+    background: $white;
+}
+.wrapper{
+	> header {
+		background-color: $base-bg_color;
+	}
+}
+#intro {
+	background-color: $base-color-grey;
+
+}
+#teaser{
+	
+	@media screen and (min-width:$screen-md){
+		margin-top: -25vH !important;
+		
+		.teaser {
+			margin-left: $smallgrid;
+			background: #fff;
+			&:last-child{
+				border-right: $smallgrid solid $white;
+			}
+		}
+	}
+}
