@@ -1,3 +1,9 @@
+$column: 40px;
+$gutter: 44px;
+$grid-columns: 12;
+$max-width: 980px;
+
+
 html, body {
     @extend %reset;
 }
@@ -104,7 +110,8 @@ html, body {
 	}
 }
 #contact.cta-section{
-	> * {@include align-self(flex-end);}
+	@include align-items(flex-start);
+	> * {@include align-self(flex-start);}
 	@media screen and (max-width:$screen-sm){
 		@include flex-wrap(wrap);
 		> .thumbnail, > .message {
@@ -114,5 +121,23 @@ html, body {
 			@include flex-basis(100%);
 		}
 	}
+}
+#recommends {
+	
+	.slides {
+		li {
+			margin: 2 * $vgrid $hgrid;
+			@include outer-container;
+			padding: 2 * $vgrid $hgrid;
+			> * {
+				@include span-columns(6);
+			}
+			.thumbnail{
+				padding: 0 $hgrid;
+			}
+		}
+	}
+	
+
 }
 

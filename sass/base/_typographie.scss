@@ -121,6 +121,7 @@ dd {
 blockquote {
     position: relative;
     margin: 1.5rem 1rem 1.5rem 3rem;
+    text-align: left;
 
     p {
         @extend .lead;

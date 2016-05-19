@@ -2,8 +2,11 @@ html, body {
     background: $white;
 }
 .wrapper{
-	> header {
+	> header, > footer {
 		background-color: $base-bg_color;
+	}
+	> footer > aside{
+		padding: 2*$vgrid 2*$hgrid;
 	}
 }
 #intro {
@@ -22,5 +25,27 @@ html, body {
 				border-right: $smallgrid solid $white;
 			}
 		}
+	}
+}
+#featured{
+	> div{
+		border:{
+			width: 2 * $smallgrid $smallgrid 0;
+			style:solid;
+			color: $white;
+		}
+	}
+}
+#contact{
+	background-color:$base-bg_color;
+/*	padding-top: 2 * $vgrid;
+	padding-bottom: $vgrid;*/
+	padding: 2 * $vgrid 2 * $hgrid $vgrid;
+	
+	> * {padding:0 $hgrid;}
+	
+	> *:first-child,
+	> *:last-child{
+		padding:0;
 	}
 }

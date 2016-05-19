@@ -2,8 +2,11 @@
 
     $(function () {
         //alert('hallo');
-        $('.flexslider').flexslider({
+        $('.titles .flexslider').flexslider({
             animation: "fade"
+        });
+        $('#recommends.flexslider').flexslider({
+        	animation: "slide"
         });
 
     });
