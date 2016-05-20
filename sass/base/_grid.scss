@@ -127,13 +127,20 @@ html, body {
 	.slides {
 		li {
 			margin: 2 * $vgrid $hgrid;
-			@include outer-container;
-			padding: 2 * $vgrid $hgrid;
-			> * {
-				@include span-columns(6);
+			@media screen and (min-width:$screen-smallPad - 1){
+				@include outer-container(50%);
 			}
-			.thumbnail{
-				padding: 0 $hgrid;
+			@media screen and (min-width:$screen-smallPad + 1){
+				
+				@include outer-container(50%);
+				overflow: hidden;
+				padding: 2 * $vgrid $hgrid;
+				> * {
+					@include span-columns(6);
+				}
+				.thumbnail{
+					padding: 0 $hgrid;
+				}
 			}
 		}
 	}
