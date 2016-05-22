@@ -14,6 +14,7 @@ html, body, .copyright {
 /*** Mixins & Placeholders ***/
 /**** caret ****/
 /* Bsp. @include alpha-background-color(rgba(black, 0.35), white); */
+/******* SVG *********/
 /* Mediaqueries breakpoints */
 /* Helper Classes */
 /*$footerHeight:66px;
@@ -364,11 +365,15 @@ table {
     .wrapper > header .titles img {
       display: none; } }
 
-.wrapper > footer > aside > * {
-  -webkit-flex-basis: 50%;
-  -moz-flex-basis: 50%;
-  flex-basis: 50%;
-  -ms-flex-preferred-size: 50%; }
+@media screen and (min-width: 600px) {
+  .wrapper > footer > aside > * {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1; } }
 
 /** einzelne sections **/
 @media screen and (min-width: 992px) {
@@ -538,37 +543,25 @@ table {
         flex-basis: 100%;
         -ms-flex-preferred-size: 100%; } }
 
-#recommends .slides li {
-  margin: 4em 2em; }
-  @media screen and (min-width: 599px) {
-    #recommends .slides li {
-      max-width: 50%;
-      margin-left: auto;
-      margin-right: auto; }
-      #recommends .slides li::after {
-        clear: both;
-        content: "";
-        display: table; } }
-  @media screen and (min-width: 601px) {
-    #recommends .slides li {
-      max-width: 50%;
-      margin-left: auto;
-      margin-right: auto;
-      overflow: hidden;
-      padding: 4em 2em; }
-      #recommends .slides li::after {
-        clear: both;
-        content: "";
-        display: table; }
-      #recommends .slides li > * {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%; }
-        #recommends .slides li > *:last-child {
-          margin-right: 0; }
-      #recommends .slides li .thumbnail {
-        padding: 0 2em; } }
+#recommends .flex-viewport {
+  margin: 2em 4em;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto; }
+  #recommends .flex-viewport::after {
+    clear: both;
+    content: "";
+    display: table; }
+@media screen and (min-width: 600px) {
+  #recommends .slides li > * {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    #recommends .slides li > *:last-child {
+      margin-right: 0; }
+  #recommends .slides li .thumbnail {
+    padding: 0 2em; } }
 
 /** LOGO **/
 h1.logo {
@@ -774,7 +767,7 @@ h1.logo {
 article {
   padding: 2em 2em; }
 
-/*** Posts ***/
+/*** Formular ***/
 .wpcf7 {
   width: inherit; }
   .wpcf7 textarea {
@@ -791,13 +784,36 @@ article {
       padding: .5em 1em;
       font-size: smaller; }
 
+/*** Navigation ***/
+.menu-item {
+  list-style: none; }
+  .menu-item a {
+    text-decoration: none; }
+  .menu-item .sub-menu {
+    display: none; }
+  .menu-item.menu-item-has-children > a:before {
+    font-family: 'FontAwesome';
+    content: "";
+    padding-right: 0.5em;
+    opacity: 1;
+    margin-left: 0;
+    font-size: 1em; }
+  .menu-item.menu-item-has-children:hover > a:before {
+    content: "\f0d7"; }
+  .menu-item.menu-item-has-children.current_page_item > a + ul, .menu-item.menu-item-has-children:hover > a + ul, .menu-item.menu-item-has-children:focus > a + ul {
+    display: block; }
+
 html, body {
   background: #fff; }
 
 .wrapper > header, .wrapper > footer {
   background-color: #e9ebee; }
-.wrapper > footer > aside {
-  padding: 4em 4em; }
+@media screen and (max-width: 600px) {
+  .wrapper > footer > aside {
+    padding: 2em 2em; } }
+@media screen and (min-width: 601px) {
+  .wrapper > footer > aside {
+    padding: 4em 4em; } }
 
 #intro {
   background-color: #d3d7dd; }

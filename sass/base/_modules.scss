@@ -177,7 +177,7 @@ h1.logo {
 article {
 	padding: $vgrid $hgrid;
 }
-/*** Posts ***/
+/*** Formular ***/
 .wpcf7{
 	width: inherit;
 	textarea{
@@ -199,3 +199,24 @@ article {
 		}
 	}
 
+/*** Navigation ***/
+.menu-item{
+	list-style:none;
+	a {text-decoration:none;}
+	.sub-menu{display:none;}
+	
+	&.menu-item-has-children{
+		> a:before{
+			@include icon-style ("\f0da", .5em, 1, 0, 1em);
+		}
+		&:hover{
+		 	> a:before{
+		 		content:"\f0d7";
+		 	}
+		 	
+		}
+		&.current_page_item, &:hover, &:focus{
+			> a + ul {display:block;}
+		} 	
+	}
+}

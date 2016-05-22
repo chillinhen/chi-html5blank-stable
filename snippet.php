@@ -1,11 +1,15 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('portfolio-item'); ?>>
-    <?php if (has_post_thumbnail()) : ?>
-        <a class="portfolio-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-            <?php the_post_thumbnail('portfolio'); ?>
-        </a>
-    <section class="portfolio_excerpt">
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <?php html5wp_excerpt('html5wp_index'); ?>
-        </section>
-    <?php endif; ?>
-</article>
+<address>
+	<span class="address">
+		Jülicher Str. 306<br>
+		52070 Aachen
+	</span>
+	<span class="mail">
+		<a href="mailto:contact@chilliscope.de">contact@chilliscope.de</a>
+	</span>
+	<span class="mobile">
+		<a href="tel:004915771427135">+49 157 714 27 135</a>
+	</span>
+	<span class="phone">		
+		<a href="tel:004924194378927">+49 241/ 94 37 89 27</a>
+	</span>	
+</address>

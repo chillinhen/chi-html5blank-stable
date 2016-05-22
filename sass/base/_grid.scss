@@ -41,10 +41,15 @@ html, body {
 		@media screen and (min-width:$screen-smallPad){display: none;}
 	}
 }
-.wrapper > footer > aside{
-	> * {@include flex-basis(50%);}
-}
+.wrapper > footer {
+	@media screen and (min-width:$screen-smallPad){
+		> aside{
+			> * {@include flex(1);}
+		}
+	}
 
+	
+}
 /** einzelne sections **/
 #intro{
 	@media screen and (min-width:$screen-md){
@@ -123,28 +128,24 @@ html, body {
 	}
 }
 #recommends {
-	
+	.flex-viewport{
+		margin: $vgrid 2 * $hgrid;
+		@include outer-container;
+		
+	}
 	.slides {
+	
 		li {
-			margin: 2 * $vgrid $hgrid;
-			@media screen and (min-width:$screen-smallPad - 1){
-				@include outer-container(50%);
-			}
-			@media screen and (min-width:$screen-smallPad + 1){
-				
-				@include outer-container(50%);
-				overflow: hidden;
-				padding: 2 * $vgrid $hgrid;
+			@media screen and (min-width:$screen-smallPad){
 				> * {
 					@include span-columns(6);
 				}
 				.thumbnail{
 					padding: 0 $hgrid;
 				}
+
 			}
 		}
 	}
-	
-
 }
 
