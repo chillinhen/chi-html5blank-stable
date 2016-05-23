@@ -5,9 +5,11 @@ $message = get_field('cta_text');
 $form = get_field('cta_formular');
 ?>
 <section id="contact" class="cta-section">
+	<?php if($thumbnail) : ?>
     <div class="thumbnail">
         <img src="<?php echo $thumbnail['url'];?>" />
     </div>
+    <?php endif; ?>
     <div class="message">
         <?php echo $message;?>
     </div>

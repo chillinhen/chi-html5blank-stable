@@ -200,12 +200,17 @@ article {
 	}
 
 /*** Navigation ***/
-.menu-item{
+.menu-item, .page_item{
+	.wrapper > footer &{
+		line-height:2;
+		border-bottom:1px dashed #333;
+	}
+	ul &:last-of-type{border:0;}
 	list-style:none;
 	a {text-decoration:none;}
-	.sub-menu{display:none;}
+	.sub-menu, .children{display:none;}
 	
-	&.menu-item-has-children{
+	&.menu-item-has-children, &.page_item_has_children{
 		> a:before{
 			@include icon-style ("\f0da", .5em, 1, 0, 1em);
 		}
@@ -218,5 +223,11 @@ article {
 		&.current_page_item, &:hover, &:focus{
 			> a + ul {display:block;}
 		} 	
+	}
+}
+/*** Tag Cloud ***/
+.tagcloud{
+	a{
+	text-decoration:none;
 	}
 }

@@ -42,9 +42,14 @@ html, body {
 	}
 }
 .wrapper > footer {
-	@media screen and (min-width:$screen-smallPad){
+	@media screen and (min-width:$screen-md){
 		> aside{
-			> * {@include flex(1);}
+			> *:first-child {
+					padding-right:$hgrid;
+				}
+			> *:last-child {
+				padding-left:$hgrid;
+			}
 		}
 	}
 
@@ -57,11 +62,11 @@ html, body {
 		
 	    .banner-img {
 	        @include flex-basis(75%);
-	       
+	       & + .banner-text{
+	           @include flex-basis(25%);
+	       }
 	    }
-	    .banner-text{
-	        @include flex-basis(25%);
-	    }
+	    
 	  }
 	  .banner-img {
 	   	@media screen and (max-width:$screen-smallPad){display: none;}

@@ -6,12 +6,16 @@ html, body {
 		background-color: $base-bg_color;
 	}
 	> footer > aside{
-		@media screen and (max-width:$screen-smallPad){
+		
+		@media screen and (max-width:$screen-md){
 			padding: $vgrid $hgrid;
+			address{min-width:320px;}
 		}
-		@media screen and (min-width:$screen-smallPad + 1){
+		@media screen and (min-width:$screen-md + 1){
 			padding: 2*$vgrid 2*$hgrid;
+			address{min-width:450px;}
 		}
+		
 		
 	}
 }

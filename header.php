@@ -44,8 +44,8 @@
             </header>
             <!-- /header -->
             <main>
-                <!-- nav -->
+                <!-- nav 
                 <nav class="nav" role="navigation">
-<?php html5blank_nav(); ?>
-                </nav>
+<?php #html5blank_nav(); ?>
+                </nav>-->
 

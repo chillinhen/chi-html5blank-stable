@@ -1,5 +1,4 @@
-<address>
-	<span class="address">
+<address><span class="address">
 		Jülicher Str. 306<br>
 		52070 Aachen
 	</span>
