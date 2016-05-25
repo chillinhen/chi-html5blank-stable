@@ -6,8 +6,8 @@
     </div>
 
 <?php endif; ?>
-    <div style="display: none;">
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php html5wp_excerpt('html5wp_index'); ?>
+    <div class="portfolio_excerpt">
+   	 	<h2><?php the_title(); ?></a></h2>
+    	<?php #html5wp_excerpt('html5wp_index'); ?>
     </div>
 </div>

@@ -110,8 +110,9 @@ html, body {
 }
 #featured{
 	@include align-items(stretch);
+	min-height:35vH;
 }
-#featured, #contact{
+#featured{
 	@media screen and (min-width:$screen-smallPad){
 		> * {
 			@include flex-basis(calc(100%/3));
@@ -120,19 +121,31 @@ html, body {
 	}
 }
 #contact.cta-section{
-	@include align-items(flex-start);
-	> * {@include align-self(flex-start);}
+	@include align-items(flex-end);
+	> * {
+		@include align-self(flex-start);
+		@include flex(1);
+		padding:2em;
+		}
+	
 	@media screen and (max-width:$screen-sm){
-		@include flex-wrap(wrap);
-		> .thumbnail, > .message {
-			@include flex-basis(50%);
-		}
-		> .form {
-			@include flex-basis(100%);
-		}
+//		@include flex-wrap(wrap);
+//		> .thumbnail, > .message {
+//			@include flex-basis(50%);
+//		}
+//		> .form {
+//			@include flex-basis(100%);
+//		}
 	}
 }
 #recommends {
+	.flex-viewport{
+		margin: $vgrid 2 * $hgrid;
+		@include outer-container;
+		overflow: hidden;
+	}
+}
+/*#recommends {
 	.flex-viewport{
 		margin: $vgrid 2 * $hgrid;
 		@include outer-container;
@@ -142,15 +155,15 @@ html, body {
 	
 		li {
 			@media screen and (min-width:$screen-smallPad){
+				
 				> * {
-					@include span-columns(6);
-				}
-				.thumbnail{
-					padding: 0 $hgrid;
+					display:table-cell;
+					width:50%;
+					vertical-align:middle;
 				}
 
 			}
 		}
 	}
-}
+}*/
 

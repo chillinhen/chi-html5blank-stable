@@ -14,8 +14,11 @@ $recommendsQuery = new WP_Query($filter);
             <ul class="slides">
                 <?php while ($recommendsQuery->have_posts()) : $recommendsQuery->the_post(); ?>
                 <li>
-                    <div class="thumbnail"><?php the_post_thumbnail('medium');?></div>
-                    <div class="content"><?php the_content();?></div>
+                    <!--<div class="thumbnail"><?php the_post_thumbnail('medium');?></div>-->
+                    <div class="content">
+                    	<h3><?php the_title();?></h3>
+                    	<?php the_content();?>
+                    </div>
                 </li>
                 <?php
                 endwhile;

@@ -6,7 +6,10 @@
             animation: "fade"
         });
         $('#recommends.flexslider').flexslider({
-        	animation: "slide"
+        	animation: "slide",
+        	slideshow: "false",
+        	touch: "true",
+        	startAt: 1
         });
 
     });

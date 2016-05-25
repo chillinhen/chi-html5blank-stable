@@ -3,6 +3,7 @@
 $filter = array(
     'post_type' => 'post',
     'category__and' => array(223,224),
+    //'category__and' => array(73,109),
     'post_status' => 'publish',
     'posts_per_page' => 3,
     'orderby' => 'date',
