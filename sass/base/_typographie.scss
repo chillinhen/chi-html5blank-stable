@@ -4,7 +4,7 @@ $rem-base:                  16px !default;
 
 $paragraph-margin:          1rem;
 
-$headings-font-family:    "Montserrat", sans-serif !default;
+$headings-font-family:    "Muli", sans-serif !default;
 $body-font-family:        "Open Sans", sans-serif !default;
 
 $heading-text-color:        $dark-color-grey;
@@ -33,22 +33,34 @@ h6{
     font-weight:400;
     color: $heading-text-color;
     @media screen and (min-width:$screen-md){
-        margin: 0 0 3 * $paragraph-margin;   
+        margin: 0 0 1.5 * $paragraph-margin;   
     }
     .titles &{
     text-transform: uppercase;
     margin:0 1.5em;
     line-height: 1.2;
-    font-size: 2vw;
+    @media screen and (max-width:$screen-smallPad){
+        padding:1em 0;
+    }
+    @media screen and (min-width:$screen-md){
+        font-size: 2vw;
+    }
+    
 	}	
     .teaser & {
         font-weight: normal;
-        font-size: large;
+        @media screen and (max-width:$screen-smallPad) and (min-width:$screen-md){
+            font-size: 2rem;
+        }
+        
         margin: 2em;
         min-height: 40px;
     }
     a{
     	text-decoration: none;
+    }
+    .footer & {/*** Temp***/
+        display:none;
     }
 
 }
@@ -61,6 +73,7 @@ p {
     font-weight: normal;
     line-height: $base-line-height;
 
+
     &.lead {
         font-size: 1rem * 1.125;
         line-height: 1.33;
@@ -72,6 +85,9 @@ a{
     .logo &{
         color:$dark-color-grey;
         body.home & {color:#fff;}
+    }
+    .footer &{
+        text-decoration: none;
     }
 }
 
@@ -136,6 +152,19 @@ blockquote {
         color: $text-muted-color;
         font-size: 5rem;
         line-height: 1;
+    }
+}
+address{
+    font-style: normal;
+    .footer & {
+        
+        p{
+            margin-bottom: $paragraph-margin * 0.2;
+            font-size: .8rem;
+        }
+        > div {
+            margin-bottom: $paragraph-margin * 0.5
+        }
     }
 }
 .text-left { text-align: left; }

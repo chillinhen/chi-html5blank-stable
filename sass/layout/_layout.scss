@@ -2,8 +2,11 @@ html, body {
     background: $white;
 }
 .wrapper{
-	> header, > footer {
-		background-color: $base-bg_color;
+	> header{
+		background-color: lighten($base-bg_color,5%);
+	}
+	> footer {
+		background-color: $base-color-grey;
 	}
 	> footer > aside{
 		
@@ -20,13 +23,12 @@ html, body {
 	}
 }
 #intro {
-	background-color: $base-color-grey;
+	background-color:$base-bg_color;
 
 }
 #teaser{
-	
+	@include transition(all 200ms ease-in-out);
 	@media screen and (min-width:$screen-md){
-		margin-top: -25vH !important;
 		
 		.teaser {
 			margin-left: $smallgrid;
@@ -58,4 +60,26 @@ html, body {
 	> *:last-child{
 		padding:0;
 	}
+}
+.footer {
+/*    address > div:before{
+        color:$dark-color-grey;
+        @include icon-style (' ', 0, 1, 1em, 1em);
+    }
+    .address:before{
+        content: "\f276";
+    }
+    .email:before{
+        content: "\f0e0";
+    }
+    .mobile:before{
+        content: "\f10b";
+    }
+    .phone:before{
+        content: "\f095";
+    }*/
+}
+.copyright{
+    background: $dark-color-grey;
+    &, & * {color:lighten($dark-color-grey,100%);}
 }

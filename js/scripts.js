@@ -11,6 +11,12 @@
         	touch: "true",
         	startAt: 1
         });
+        
+        // toggle
+        $('.toggle').click(function(){
+            $(this).toggleClass('show');
+            $('.banner-img, .banner-text').toggleClass('shrink');
+        });
 
     });
 

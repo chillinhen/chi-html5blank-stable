@@ -94,6 +94,7 @@ textarea {
 .clearfix:after {
     clear: both;
 }
+a:focus{outline: none;}
 img {
 	max-width: 100%;
     div:not(.teaser) &{
@@ -164,4 +165,7 @@ img {
  			/*@include icon-style ("\f00a", 0, 1, .5em, 2em);*/
  		}
  	}
+ }
+ .post-edit-link{
+     font-size: small;
  }

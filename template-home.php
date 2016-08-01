@@ -9,12 +9,16 @@
             <?php endif; ?>
             <div class="banner-text">
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <h2><?php the_title(); ?></h2>
-                    <?php the_excerpt(); ?>
-                    <?php edit_post_link(); ?>
+                    <h2>
+                        <?php the_title(); ?> <?php edit_post_link(); ?>
+                    </h2>
+                    <?php the_content(); ?>
+
+                    </div>
+                    
                 </article>
             </div>
-        <?php endwhile;
+        <?php endwhile;wp_reset_query();
         ?>
     <?php else: ?>
         <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>

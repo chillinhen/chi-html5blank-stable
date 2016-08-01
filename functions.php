@@ -141,9 +141,8 @@ function html5blank_styles()
      wp_register_style('flexslider',get_stylesheet_directory_uri().'/flexslider/flexslider.css',array(),false,'screen');
         wp_enqueue_style('flexslider');
         
-        wp_register_style('googlefonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Montserrat,400,700', 'style', array(),'', 'all');
+        wp_register_style('googlefonts', 'https://fonts.googleapis.com/css?family=Muli:400,300|Open+Sans:400,400italic,600,700', 'style', array(),'', 'all');
         wp_enqueue_style('googlefonts'); // Enqueue it!
-
         
         wp_register_style('fontawseome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css', 'style', array(),'4.6.2', 'all');
         wp_enqueue_style('fontawseome'); // Enqueue it!
@@ -374,7 +373,18 @@ function html5blankcomments($comment, $args, $depth)
 	</div>
 	<?php endif; ?>
 <?php }
-
+function toggle_content($atts) {
+   extract(shortcode_atts(array(
+       'text' => 'mehr lesen'
+   ), $atts));
+//return '<img src="http://lorempixel.com/'. $width . '/'. $height . '" />';
+return '<a class="toggle"><span>'. $text .'</span></a><div class="show-content">';
+}
+add_shortcode('toggle', 'toggle_content');
+function close_toggle_content(){
+    return '</div>';
+}
+add_shortcode('close-toggle', 'close_toggle_content');
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
