@@ -6,14 +6,15 @@
 
 @import "utils/_variables";
 @import "utils/_mixins";
+//@import "utils/_preloader";
 @import "utils/_globals";
 @import "base/_typographie";
+//@import "base/_sticky-footer";
 @import "base/_grid";
 @import "base/_modules";
 @import "base/_navigation";
 @import "layout/_layout";
-@import "_temp";
 @import "_shame";
-@import "_helper";
+//@import "_helper";
 
 

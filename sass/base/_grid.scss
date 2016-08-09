@@ -1,185 +1,154 @@
-$column: 40px;
-$gutter: 44px;
-$grid-columns: 12;
-$max-width: 980px;
-
-
-html, body {
-    @extend %reset;
-
-}
+/*** Fixed width for large screens ***/
 .wrapper{
-    @media screen and (min-width:$screen-md){
-        min-height: 100vH;
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(space-between);
+    width:100%;
+    overflow-x: hidden;
+    @media screen and (max-width:$screen-wide){
+        width:100%;
     }
     @media screen and (min-width:$screen-wide + 1){
         max-width: $screen-lg;
         margin: 0 auto;
     }
-    > header, > main > section:not(#recommends), footer > aside {
+}
+/*** Flexboxes ***/
+.flexbox .wrapper{
+    > header, footer > aside{
+        @include base-flex;
+    }
+    > header {
+        @media screen and (min-device-width:$screen-xs) and (max-device-width:$screen-sm) and (orientation:landscape){
+            height:50vH;
+        }
+        @media screen and (min-device-width:$screen-smallPad){ 
+            height:25vH;
+            @include align-items(center);
+            
+            > * {
+                @include flex-basis(50%);  
+            }
 
-        @media screen and (min-width:$screen-xs + 1){
+        }
+        .titles img {
+            @media screen and (max-width:$screen-sm - 1) and (orientation:landscape){display: none;}
+            @media screen and (min-width:$screen-sm) {display: none;}
+        }
+    }
+}
+body > footer {
+    .flexbox & {
+        @media screen and (min-width:$screen-md){
+            > aside{
+                @include justify-content(space-between);
+                @include align-items(flex-start);
+                > *:first-child {
+                    padding-right:$hgrid;
+                }
+                > *:last-child {
+                    padding-left:$hgrid;
+                    @include flex(2);
+                }
+            }
+            &:not(.home) > aside {
+                @include outer-container(1024px);
+            }
+        }
+        address{
             @include display(flex);
+            @include justify-content(flex-start);
+            > div {padding-right: $hgrid;}
         }
     }
 }
-
-.wrapper > header {
-    @include align-items(stretch);
-
-    @media screen and (min-width:$screen-sm){
-        //		height: 50vH;
-        height:25vH;
-    }
-    @media screen and (min-width:$screen-xs + 1){
-        > * {
-            @include flex-basis(50%); 
-            @include align-self(center);
-        }
-    }
-
-    .titles img {
-        @media screen and (max-width:$screen-sm - 1) and (orientation:landscape){display: none;}
-        @media screen and (min-width:$screen-sm) {display: none;}
-    }
-}
-.wrapper > footer {
-    @media screen and (min-width:$screen-md){
-        > aside{
-            @include justify-content(space-between);
-            @include align-items(flex-start);
-            > *:first-child {
-                padding-right:$hgrid;
-            }
-            > *:last-child {
-                padding-left:$hgrid;
-                @include flex(2);
-            }
-        }
-    }
-
-
-}
-/** einzelne sections **/
 #intro{
-    @media screen and (min-width:$screen-md){
-        @include align-items(flex-start);
-        > * {
-            @include transition(all 200ms ease-in-out);
-        }
-        .banner-img {
-            //	        @include flex-basis(62.5%);
-            @include flex-basis(50%);
-            & + .banner-text{
-                //	           @include flex-basis(37.5%);
-                @include flex-basis(50%);
-            }
-        }
-        .banner-img.shrink{
-            @include flex-basis(25%);
-        }
-        .banner-text.shrink{
-            @include flex-basis(75%);
-        }
-
+    .flexbox &{
+        @include base-flex;
+        > * {@include flex-basis(50%);}
     }
     .banner-img {
         @media screen and (max-width:$screen-smallPad){display: none;}
     }
 }
-
 #teaser{
-    @include align-items(stretch);
-    > * {
-        //	    @include flex-basis(25%);
-        @include flex(1);
-        @include justify-content(center);
-        @include align-self(center);
+    .flexbox &{
+        @include base-flex;
+        @include align-items(stretch);
+        > * {
+            @include flex(1);
+            @include justify-content(center);
+            // @include align-self(center);
+        }
     }
+
     > .call-to-action{display:none;}
 }
 #latest{
-    @include align-items(flex-start);
-    > .latest{
-        @include display(flex);
-    }
-
-    @media screen and (max-width:$screen-sm){
-        > .latest{
-            @include flex-direction(column);
-        }
-                .contact{
-            display: none;
-        }
-    }
-    @media screen and (min-width:$screen-sm + 1){
-        > .latest{
-            > .portfolio-excerpt{@include flex-basis(33.5%);}
-            > .portfolio-thumbnail{@include flex-basis(66.5%);}
-        }
-
-    }
-    
-        @media screen and (min-width:$screen-md){
-        min-height:50vH;
-        > .contact{
-            @include flex-basis(25%);
-        }
-        > .latest{
-            @include flex-basis(75%);
-            @include align-self(flex-end);
-        }
-    }
-}
-#featured{
+    @include base-flex;
     @include align-items(stretch);
-    @media screen and (max-width:$screen-md){
-        min-height:15vH; 
-    }
+
     @media screen and (min-width:$screen-md){
-       min-height:35vH; 
+        margin:$vgrid 6 * $hgrid;
     }
-    
+    @media screen and (min-width:$screen-sm + 1) and (max-width:$screen-md){
+        margin:$vgrid $hgrid/5;
+    }
+    @media screen and (min-width:$screen-xs){
+        .portfolio-excerpt{@include flex-basis(40%);}
+        .portfolio-thumbnail{@include flex-basis(60%);}
+    }
 }
 #featured{
-    @media screen and (min-width:$screen-smallPad){
-        > * {
-            @include flex-basis(calc(100%/3));
-            overflow: hidden;
-        }
+    @include base-flex;
+    @include align-items(stretch);
+
+    @media screen and (min-width:$screen-sm){
+        height:280px; 
     }
 }
-#contact.cta-section{
-    @include align-items(flex-end);
-    > * {
-        @include align-self(flex-start);
-        @include flex(1);
-        padding:2em;
+#contact{
+
+    @include base-flex;
+    @media screen and (max-device-width:$screen-sm) and (orientation:landscape){
+        @include flex-direction(column);
     }
+    @media screen and (min-device-width:$screen-sm){
+        @include align-items(flex-start);
+        .message{
+            @include flex-basis(40%); 
+        }
+        .form{
+            @include flex-basis(60%);   
+        }
+    }
+    @include special-padding;
 }
 #recommends {
-    .flex-viewport{
-        margin: $vgrid 2 * $hgrid;
-        @include outer-container;
-        overflow: hidden;
-    }
-    .slides{
-        .content{
-            width: 80%;
-            padding:0 10%;
-            @include display(flex);
-            @media screen and (max-width:$screen-smallPad){
-                @include flex-direction(column);
-                img {display:block;}
+    .content{
+        @include display(flex);
+        @media screen and (max-device-width:$screen-smallPad){
+            @include flex-direction(column);
+            img {display:block;}
+        }
+        @media screen and (min-device-width:$screen-sm){
+/*            width:75%;
+            margin:0 auto;*/
+            > .thumbnail + span{
+                padding: 0 2em;
+                @include flex(2);
             }
         }
     }
-    .flex-direction-nav{
-        padding:0 2em;
+    .flex-viewport{
+        margin: $vgrid 2 * $hgrid;  
+        margin: 0;
+        overflow: hidden;
     }
+    @include special-padding;
 }
 
-
+.page:not(.home) .wrapper{
+    > main {
+        > section{
+            @include outer-container(1024px);
+        }
+    }
+}

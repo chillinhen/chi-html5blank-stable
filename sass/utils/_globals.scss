@@ -3,6 +3,10 @@
     color: $white;
     text-shadow: none;
 }
+
+*{
+    position: relative;
+}
 /*
  * A better looking default horizontal rule
  */
@@ -96,9 +100,9 @@ textarea {
 }
 a:focus{outline: none;}
 img {
-	max-width: 100%;
+    max-width: 100%;
     div:not(.teaser) &{
-        
+
     }
 }
 /*

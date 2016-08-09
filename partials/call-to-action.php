@@ -12,6 +12,7 @@ $form = get_field('cta_formular');
     <?php endif; ?>
     <div class="message">
         <?php echo $message;?>
+        <?php get_template_part('partials/contact'); ?>
         <?php get_template_part('partials/social','media');?>
     </div>
     <div class="form">

@@ -1,13 +1,36 @@
 @mixin ctaBadge($item) {
     width: $item !important;
     height: $item !important;
-/*    line-height: $item;*/
     @include border-radius ($item/2);
 }
 
 @mixin flex-nav($size){
-	margin:-$size/2 0 0;
-	&:before{
-		font-size: $size;
-	}
+    margin:-$size/2 0 0;
+    &:before{
+        font-size: $size;
+    }
+}
+@mixin base-flex{
+    @include display(flex);
+    @media screen and (max-device-width:$screen-smallPad){
+        @include flex-direction(column);
+    }
+}
+
+@mixin special-padding{
+    @media screen and (max-width:$screen-smallPad){
+        padding:2em;
+    }
+    @media screen and (min-width:$screen-smallPad) and (max-width:$screen-md) {
+        padding:$vgrid $hgrid;
+        .flex-control-nav{
+            margin:0 -$hgrid;
+        }
+    }
+    @media screen and (min-width:$screen-md){
+        padding:1.5 * $vgrid 6 * $hgrid;
+        .flex-control-nav{
+            margin:0 - 6 * $hgrid;
+        }
+    }
 }

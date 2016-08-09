@@ -2,83 +2,64 @@ html, body {
     background: $white;
 }
 .wrapper{
-	> header{
-		background-color: lighten($base-bg_color,5%);
-	}
-	> footer {
-		background-color: $base-color-grey;
-	}
-	> footer > aside{
-		
-		@media screen and (max-width:$screen-md){
-			padding: $vgrid $hgrid;
-			address{min-width:320px;}
-		}
-		@media screen and (min-width:$screen-md + 1){
-			padding: 2*$vgrid 2*$hgrid;
-			address{min-width:450px;}
-		}
-		
-		
-	}
+    > header{
+        background-color: lighten($base-bg_color,2%);
+    }
+}
+body > footer {
+    background-color: $base-color-grey;
+    > aside{
+        @media screen and (max-width:$screen-md){
+            padding: $vgrid $hgrid;
+            address{min-width:320px;}
+        }
+        @media screen and (min-width:$screen-md + 1){
+            padding: 2*$vgrid 2*$hgrid;
+            address{min-width:450px;}
+        }
+    }
 }
 #intro {
-	background-color:$base-bg_color;
-
+    background-color:$base-bg_color;
 }
 #teaser{
-	@include transition(all 200ms ease-in-out);
-	@media screen and (min-width:$screen-md){
-		
-		.teaser {
-			margin-left: $smallgrid;
-			background: #fff;
-			&:last-child{
-				border-right: $smallgrid solid $white;
-			}
-		}
-	}
+    @include transition(all 200ms ease-in-out);
+    @media screen and (min-width:$screen-md){
+
+        .teaser {
+            margin-left: $smallgrid;
+            background: #fff;
+            &:last-child{
+                border-right: $smallgrid solid $white;
+            }
+        }
+    }
 }
-#featured{
-	> div{
-		border:{
-			width: 2 * $smallgrid $smallgrid 0;
-			style:solid;
-			color: $white;
-		}
-	}
+#latest{
+    background-color:lighten($base-color-grey,5%);
+    * {
+        color:$dark-color-grey;
+    }
+    .badge{
+        background: $primary-color;
+        font-size: large;
+        padding:.2em .5em;
+        @media screen and (min-device-width:$screen-sm) and (orientation:landscape){
+            margin: 1em -.5em;
+        }
+        color:white;
+        position: absolute;
+        top:0;
+        left:0;
+        + article{
+            margin-top: 2em;
+        }
+    }
 }
 #contact{
-	background-color:$base-bg_color;
-/*	padding-top: 2 * $vgrid;
-	padding-bottom: $vgrid;*/
-	padding: 2 * $vgrid 2 * $hgrid $vgrid;
-	
-	> * {padding:0 $hgrid;}
-	
-	> *:first-child,
-	> *:last-child{
-		padding:0;
-	}
+    background-color:$base-bg_color;
 }
-.footer {
-/*    address > div:before{
-        color:$dark-color-grey;
-        @include icon-style (' ', 0, 1, 1em, 1em);
-    }
-    .address:before{
-        content: "\f276";
-    }
-    .email:before{
-        content: "\f0e0";
-    }
-    .mobile:before{
-        content: "\f10b";
-    }
-    .phone:before{
-        content: "\f095";
-    }*/
-}
+.footer {}
 .copyright{
     background: $dark-color-grey;
     &, & * {color:lighten($dark-color-grey,100%);}

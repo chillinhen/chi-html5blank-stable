@@ -1,5 +1,6 @@
 //debugging
-$foo:red;
+$foo:rgba(255,0,0,0.5);
+
 $base-color-grey:#cad4e5;
 $dark-color-grey:#525d70;
 $base-color-white:#fff;
@@ -10,7 +11,7 @@ $white: #fff;
 //Base Colors
 $color-bd:$base-color-grey;
 $base-bg_color:#e5eaf2;
-$text-color:darken($dark-color-grey,50%);
+$text-color:darken($base-color-grey,50%);
 
 
 //Grids, Margins and paddings

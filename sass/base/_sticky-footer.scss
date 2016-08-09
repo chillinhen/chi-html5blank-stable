@@ -1,0 +1,28 @@
+html {
+    min-height: 100%;
+}
+body {
+    @extend %reset;
+    margin-bottom: 230px;
+    > .footer {
+        position: absolute;
+        width: 100%;
+        bottom:0;
+        height: 230px;
+    }
+}
+/*** Flexbox Footer ***/
+/*.wrapper{
+    .flexbox & {
+        min-height: 100%;
+        @media screen and (min-device-width:$screen-md){
+            min-height: 100vH;
+            @include display(flex);
+            @include flex-direction(column);
+            @include justify-content(space-between);
+
+            > main {@include flex(2);}
+        }
+    }
+}*/
+/*** End Flexbox Footer ***/

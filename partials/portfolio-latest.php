@@ -1,5 +1,6 @@
 <?php
 //latest Portfolio Thumbs
+$latest_headline = get_field('latest_headline');
 $filter = array(
     'post_type' => 'post',
     'category_name' => 'portfolio',
@@ -11,14 +12,20 @@ $filter = array(
 $latestQuery = new WP_Query($filter);
 ?>
 <?php if ($latestQuery->have_posts()): ?>
-    <section id="latest">
-        <?php get_template_part('partials/contact'); ?>
-        <div class="latest">
+    <section id="latest" class="latest">
+        <?php #get_template_part('partials/contact'); ?>
+<!--        <div class="latest">-->
+                <?php
+                if ($latest_headline) :
+                    echo '<span class="badge">' . $latest_headline . '</span>';
+                endif;
+                ?>
+            
         <?php while ($latestQuery->have_posts()) : $latestQuery->the_post(); ?>
             <?php get_template_part('partials/article','latest'); ?>
         <?php endwhile;
         wp_reset_postdata();
         ?>
-        </div>
+<!--        </div>-->
     </section>
 <?php endif; ?>

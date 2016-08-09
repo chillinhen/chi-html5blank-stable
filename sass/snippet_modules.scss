@@ -1,0 +1,40 @@
+/*** Call to Action ***/
+/*.call-to-action{
+        .badge{
+                @include ctaBadge(200px);
+                margin:auto auto;
+                background: white;
+                span {display: block;}
+                @include shadow;
+                
+                a{
+                        text-decoration: none;
+                        display: block;
+                        color:grey;
+                        font-size:1.4em;
+                        padding:.6em 0;
+                        
+                        span {
+                            font-family: $headings-font-family;
+                        }
+                        
+                        span:nth-child(2){
+                            text-transform: uppercase;
+                            color:$primary-color;
+                            font-size: 1.8em;
+                            line-height: 1;
+                        }
+                        span:last-child{
+                            color:$dark-color-grey;
+                            font-size: 1.2em;
+                        }
+                }
+        }
+}
+.cta-section{
+    .thumbnail{
+        text-align: center;
+    }
+}
+*/
+

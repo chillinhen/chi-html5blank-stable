@@ -4,46 +4,42 @@
         padding:0;
         margin:0;
         float:right;
+        @media screen and (max-width:$screen-xs){
+            margin:0 -2em;
+            float:none;
+            text-align:center;
+        }
     }
 }
 .menu-item, .page_item{
-    list-style:none;
-    .wrapper > footer &{
+    a {text-decoration:none;}
+    .sub-menu, .children{display:none;}
+    .footer &{
         font-size: .8rem;
         border:{
+            width:0 1px 0 0;
             color:$dark-color-grey;
             style:solid;
         }
-    }
-    @media screen and (max-width:$screen-xs){
-        border-width:0 0 1px 0;
-        line-height:2;
-    }
-    @media screen and (min-width:$screen-md + 1){
         line-height:1;
         display: inline-block;
         padding:0 .5em;
-        border-width:0 1px 0 0;
-    }
+        list-style:none;
+        &:last-of-type, &.last-child{border:0;}
 
-
-    &:last-of-type{border:0;}
-
-    a {text-decoration:none;}
-    .sub-menu, .children{display:none;}
-
-    &.menu-item-has-children, &.page_item_has_children{
-        > a:before{
-            @include icon-style ("\f0da", .5em, 1, 0, 1em);
-        }
-        &:hover{
+        &.menu-item-has-children, &.page_item_has_children{
             > a:before{
-                content:"\f0d7";
+                @include icon-style ("\f0da", .5em, 1, 0, 1em);
             }
+            &:hover{
+                > a:before{
+                    content:"\f0d7";
+                }
 
+            }
+            &.current_page_item, &:hover, &:focus{
+                > a + ul {display:block;}
+            } 	
         }
-        &.current_page_item, &:hover, &:focus{
-            > a + ul {display:block;}
-        } 	
     }
 }

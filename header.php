@@ -35,16 +35,18 @@
                         <span><?php bloginfo('title'); ?> - <?php bloginfo('description'); ?></span>
                     </a>
                 </h1>
+                <?php #if(is_front_page()) : ?>
                 <div class="titles">
 <?php get_template_part('partials/header', 'slides'); ?>
                 </div>
+                <?php #endif; ?>
                 <!-- /logo -->
 
 
                 <!-- /nav -->
             </header>
             <!-- /header -->
-            <main>
+            <main role="main">
                 <!-- nav 
                 <nav class="nav" role="navigation">
 <?php #html5blank_nav(); ?>

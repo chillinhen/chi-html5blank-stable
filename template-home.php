@@ -14,16 +14,16 @@
                     </h2>
                     <?php the_content(); ?>
 
-                    </div>
-                    
-                </article>
             </div>
-        <?php endwhile;wp_reset_query();
-        ?>
-    <?php else: ?>
-        <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
 
-    <?php endif; ?>
+        </article>
+    <?php endwhile;
+    wp_reset_query();
+    ?>
+<?php else: ?>
+    <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
+
+<?php endif; ?>
 </section>
 <!-- Teaser -->
 <?php get_template_part('partials/teaser'); ?>
@@ -33,10 +33,10 @@
 <?php get_template_part('partials/portfolio', 'featured'); ?>
 <!-- /Portfolio -->
 <!-- Call to Action Section -->
-<?php get_template_part('partials/call-to-action');?>
+<?php get_template_part('partials/call-to-action'); ?>
 <!-- /Call to Action Section -->
 <!-- Recommends -->
-<?php get_template_part('partials/recommends');?>
+<?php get_template_part('partials/recommends'); ?>
 <!-- /Recommends -->
 <?php get_footer(); ?>
 
