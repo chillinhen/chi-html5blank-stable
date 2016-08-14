@@ -3,15 +3,13 @@
 @import "/Users/chilliscope/Documents/Webseiten/toolbox/sass/myMixins/extends";
 @import "/Users/chilliscope/Documents/Webseiten/toolbox/sass/myMixins/mixins";
 @import "/Users/chilliscope/Documents/Webseiten/toolbox/sass/myMixins/breakpoints";
-
-@import "utils/_variables";
-@import "utils/_mixins";
-//@import "utils/_preloader";
-@import "utils/_globals";
-@import "base/_typographie";
-@import "base/_sticky-footer";
-@import "base/_grid";
-@import "base/_modules";
-@import "base/_navigation";
-@import "layout/_layout";
-@import "_shame";
+* {
+    color:red !important;
+}
+#teaser{
+    .icon {
+        @media screen and (min-width:$screen-sm){
+            min-height:100px;
+        }
+    }
+}

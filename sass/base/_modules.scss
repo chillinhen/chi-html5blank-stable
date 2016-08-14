@@ -5,14 +5,14 @@ h1.logo {
     }
     margin:0;
     line-height:0;
-    @media screen and (max-device-width:$screen-xs) and (orientation:portrait){
-        margin:2em 0;
+    @media screen and (max-device-width:$screen-smallPad) and (orientation:portrait){
+        margin:1.2em 0;
     }
     img {
-        @media screen and (max-device-width:$screen-xs){
+        @media screen and (max-device-width:$screen-xs) and (orientation:landscape){
             padding:5vH 15vW;
         }
-        @media screen and (min-device-width:$screen-xs + 1) and (max-device-width:$screen-sm) and (orientation:landscape){
+        @media screen and (min-device-width:$screen-xs + 1) and (max-device-width:$screen-sm) and (orientation:landscape) and (orientation:landscape){
             padding:0 5vW;
         }
 
@@ -25,9 +25,8 @@ h1.logo {
 .flexslider{
     background: transparent;
     border:0;
-
-    margin:0;
     .titles & {
+        margin:0;
         text-align: center;
         li {
             @media screen and (min-width:$screen-smallPad) and (max-width:$screen-md){
@@ -43,7 +42,14 @@ h1.logo {
 .flex-control-nav{
     .titles &{display: none;}
     #recommends & {
-        bottom:0;
+        @media screen and (max-width:$screen-sm){
+           bottom:0; 
+           margin:0 -2em;
+        }
+        @media screen and (min-width:$screen-sm + 1){
+           bottom:30%; 
+        }
+        
     }
 }
 /*** shrink intro ***/
@@ -67,25 +73,13 @@ h1.logo {
         text-align: center;
     }
     .teaser{
-        /*        padding:10vH 0;*/
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
-        @include align-items(center);
-        > * {
-            @include align-self(center);
-            @include flex(1);
-        }
         img {
             margin:0 auto;
-            @media screen and (max-device-width:$screen-xs) and (orientation:portrait){
-                width:24    vW;
-            }
-            @media screen and (min-device-width:$screen-xs + 1) and (max-device-width:$screen-md){
-                width:10vW;
-            }
-            @media screen and (min-device-width:$screen-md){
-                width:8vW;
+            height:100px;
+            width:auto;
+            max-width:none;
+            .ie.windows & {
+                margin-bottom: 2em;
             }
         }
         a{
@@ -170,14 +164,16 @@ h1.logo {
             }
         }
     }
+    @include flex-basis(33%);
 }
 .portfolio-thumbnail{
     overflow:hidden;
-    height:280px;
     background:$primary_color;
     img{
-        height:100%;
-        width: auto;
+        #latest &{
+            max-width: 100%;
+            height:auto;
+        }
     }
 }
 .latest{
@@ -210,9 +206,10 @@ article {
         margin-right: $hgrid;
     }
     #contact &{
-        margin-left: $hgrid;
+        @media screen and (min-width: $screen-sm){
+           margin-left: $hgrid; 
+        } 
     }
-    /*    width: inherit;*/
     textarea{
         max-height:150px;
     }
@@ -263,11 +260,11 @@ article {
     text-decoration: none;
     &:before{
         color:$dark-color-grey;
-        @include icon-style ("\f055", 0, 1, 0, 2em);
+        @include icon-style ("\f055", 0, 1, 0, 44px);
     }
     &.show{
         &:before{
-            @include icon-style ("\f056", 0, 1, 0, 2em);
+            @include icon-style ("\f056", 0, 1, 0, 44px);
         }
     }
 }
@@ -275,11 +272,21 @@ article {
 #recommends{
     .thumbnail{
         @include gray-filter(100%);
-        padding: 2*$hgrid;
-        height:300px;
-        width:auto;
-        float: left;
+        
+        @media screen and (max-width:$screen-sm){
+            display:block;
+            width:100%;
+            padding-bottom: 2*$hgrid;
+        }
+        
         &:hover{@include gray-filter(0);}
+        
+/*        img {
+            height:300px;
+            width:auto;
+            max-width: none;
+            margin:0 auto;
+        }*/
     } 
 }
 /** Footer **/

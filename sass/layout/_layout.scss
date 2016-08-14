@@ -1,5 +1,6 @@
-html, body {
+body {
     background: $white;
+    @extend %reset;
 }
 .wrapper{
     > header{

@@ -20,11 +20,11 @@ $recommendsQuery = new WP_Query($filter);
                 <?php while ($recommendsQuery->have_posts()) : $recommendsQuery->the_post(); ?>
                 <li>
                     <div class='content clearfix'>
-                        <span class='thumbnail'><?php the_post_thumbnail('medium');?></span>
-                        <span>
+                        <div class='thumbnail'><?php the_post_thumbnail('medium');?></div>
+                        <div class="text">
                             <h3><?php the_title();?></h3>
                             <?php the_content();?>
-                        </span>
+                        </div>
                     </div>
                 </li>
                 <?php

@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/*** BSP: @extend %reset;***/
+/*** Mixins & Placeholders ***/
+/**** caret ****/
+/* Bsp. @include alpha-background-color(rgba(black, 0.35), white); */
+/******* SVG *********/
+/*** WP Specials ***/
+/* Mediaqueries breakpoints */
+/* Helper Classes */
+* {
+  color: red !important; }
+
+@media screen and (min-width: 768px) {
+  #teaser .icon {
+    min-height: 100px; } }
+
+/*# sourceMappingURL=ie.css.map */

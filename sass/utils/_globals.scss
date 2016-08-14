@@ -157,8 +157,12 @@ img {
  	    display: none;
  	}
  }
+ a.btn{
+     @include button-style;
+ }
  button{
  	@include appearance(none);
+        
  	a{text-decoration: none;}
  	&.portfolio-link{
  		background-color: transparent;
