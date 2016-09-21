@@ -7,11 +7,12 @@
 @import "utils/_variables";
 @import "utils/_mixins";
 //@import "utils/_preloader";
-@import "utils/_globals";
 @import "base/_typographie";
+@import "utils/_globals";
 @import "base/_sticky-footer";
 @import "base/_grid";
+@import "layout/_layout";
 @import "base/_modules";
 @import "base/_navigation";
-@import "layout/_layout";
-@import "_shame";
+
+//@import "_shame";

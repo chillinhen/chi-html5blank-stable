@@ -29,181 +29,6 @@ $footerHomeHeight:87px;
 
 $mobileHeaderHeight:40px;
 $headerBorderWidth:4px;*/
-::-moz-selection {
-  background-color: #fecc16;
-  color: #fff;
-  text-shadow: none; }
-
-::selection {
-  background-color: #fecc16;
-  color: #fff;
-  text-shadow: none; }
-
-* {
-  position: relative; }
-
-/*
- * A better looking default horizontal rule
- */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cad4e5;
-  margin: 2em 0;
-  padding: 0; }
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle; }
-
-/*
- * Remove default fieldset styles.
- */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0; }
-
-textarea {
-  resize: vertical; }
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
- * Hide visually and from screen readers
- */
-.hidden {
-  display: none !important; }
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-.invisible {
-  visibility: hidden; }
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.clearfix:after {
-  clear: both; }
-
-a:focus {
-  outline: none; }
-
-img {
-  max-width: 100%; }
-
-/*
- * Formular Elements
- */
-form {
-  width: 100%; }
-  form input[type="text"],
-  form input[type="email"],
-  form input[type="number"],
-  form input[type="password"],
-  form input[type="submit"],
-  form select,
-  form textarea {
-    width: 100%; }
-  form input, form select, form textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: .5em 1em;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #fecc16; }
-    form input:focus, form select:focus, form textarea:focus {
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
-  form input[type="checkbox"] {
-    height: 20px;
-    width: 20px;
-    background-color: #fff; }
-    form input[type="checkbox"]:hover {
-      background: #cad4e5;
-      box-shadow: inset 0 0 0 2px white; }
-    form input[type="checkbox"]:checked {
-      background: #fecc16;
-      box-shadow: inset 0 0 0 2px white; }
-  form input[type="submit"] {
-    background-color: #fecc16;
-    color: #fff; }
-  form select {
-    background: #fff url(../img/icons/down-arrow.svg) no-repeat 95% 50%;
-    background-size: 1em auto; }
-  form select::-ms-expand {
-    display: none; }
-
-a.btn {
-  padding: 1em 2em;
-  background: #fecc16;
-  color: #fff;
-  text-transform: uppercase;
-  margin: 2em auto;
-  display: block;
-  max-width: 60%;
-  text-align: center; }
-
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-  button a {
-    text-decoration: none; }
-  button.portfolio-link {
-    background-color: transparent;
-    border: 0; }
-    button.portfolio-link a:after {
-      font-family: 'FontAwesome';
-      content: "";
-      padding-right: 0;
-      opacity: 1;
-      margin-left: 0.5em;
-      font-size: 2em;
-      /*@include icon-style ("\f00a", 0, 1, .5em, 2em);*/ }
-
-.post-edit-link {
-  font-size: small; }
-
 strong, dt, table th {
   font-weight: 600; }
 
@@ -469,6 +294,182 @@ table {
     text-align: left; }
   table tr:nth-child(even) td {
     background-color: #ecf0f6; }
+
+::-moz-selection {
+  background-color: #fecc16;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background-color: #fecc16;
+  color: #fff;
+  text-shadow: none; }
+
+* {
+  position: relative; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cad4e5;
+  margin: 2em 0;
+  padding: 0; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+a:focus {
+  outline: none; }
+
+img {
+  max-width: 100%; }
+
+/*
+ * Formular Elements
+ */
+form {
+  width: 100%; }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="number"],
+  form input[type="password"],
+  form input[type="submit"],
+  form select,
+  form textarea {
+    width: 100%; }
+  form input, form select, form textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: .5em 1em;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fecc16; }
+    form input:focus, form select:focus, form textarea:focus {
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+  form input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    background-color: #fff; }
+    form input[type="checkbox"]:hover {
+      background: #cad4e5;
+      box-shadow: inset 0 0 0 2px white; }
+    form input[type="checkbox"]:checked {
+      background: #fecc16;
+      box-shadow: inset 0 0 0 2px white; }
+  form input[type="submit"] {
+    background-color: #fecc16;
+    color: #fff; }
+  form select {
+    background: #fff url(../img/icons/down-arrow.svg) no-repeat 95% 50%;
+    background-size: 1em auto; }
+  form select::-ms-expand {
+    display: none; }
+
+a.btn {
+  padding: 1em 2em;
+  background: #fecc16;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 2em auto;
+  display: block;
+  max-width: 60%;
+  text-align: center; }
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  button a {
+    text-decoration: none; }
+  button.portfolio-link {
+    background-color: transparent;
+    border: 0; }
+    button.portfolio-link a:after {
+      font-family: 'FontAwesome';
+      content: "";
+      padding-right: 0;
+      opacity: 1;
+      margin-left: 0.5em;
+      font-size: 2em;
+      /*@include icon-style ("\f00a", 0, 1, .5em, 2em);*/ }
+
+.post-edit-link {
+  font-size: small; }
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -878,6 +879,65 @@ body.error404 {
     content: "";
     display: table; }
 
+body {
+  background: #fff; }
+
+.wrapper > header {
+  background-color: #eceff5; }
+
+body > footer {
+  background-color: #cad4e5; }
+  @media screen and (max-width: 992px) {
+    body > footer > aside {
+      padding: 2em 2em; }
+      body > footer > aside address {
+        min-width: 320px; } }
+  @media screen and (min-width: 993px) {
+    body > footer > aside {
+      padding: 4em 4em; }
+      body > footer > aside address {
+        min-width: 450px; } }
+
+#intro {
+  background-color: #e5eaf2; }
+
+#teaser {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out; }
+  @media screen and (min-width: 992px) {
+    #teaser .teaser {
+      margin-left: 2px;
+      background: #fff; }
+      #teaser .teaser:last-child {
+        border-right: 2px solid #fff; } }
+
+#latest {
+  background-color: #dbe2ed; }
+  #latest * {
+    color: #525d70; }
+  #latest .badge {
+    background: #fecc16;
+    font-size: large;
+    padding: .2em .5em;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    @media screen and (min-device-width: 768px) and (orientation: landscape) {
+      #latest .badge {
+        margin: 1em -.5em; } }
+    #latest .badge + article {
+      margin-top: 2em; }
+
+#contact {
+  background-color: #e5eaf2; }
+
+.copyright {
+  background: #525d70; }
+  .copyright, .copyright * {
+    color: white; }
+
 /** HEADER **/
 h1.logo {
   margin: 0;
@@ -920,6 +980,9 @@ h1.logo {
     bottom: 30%; } }
 
 /*** shrink intro ***/
+@media screen and (max-width: 600px) {
+  #intro {
+    min-height: 80vH; } }
 @media screen and (min-width: 600px) {
   #intro {
     -webkit-box-align: start;
@@ -1236,64 +1299,5 @@ article {
     content: "\f0d7"; }
   .footer .menu-item.menu-item-has-children.current_page_item > a + ul, .footer .menu-item.menu-item-has-children:hover > a + ul, .footer .menu-item.menu-item-has-children:focus > a + ul, .footer .menu-item.page_item_has_children.current_page_item > a + ul, .footer .menu-item.page_item_has_children:hover > a + ul, .footer .menu-item.page_item_has_children:focus > a + ul, .footer .page_item.menu-item-has-children.current_page_item > a + ul, .footer .page_item.menu-item-has-children:hover > a + ul, .footer .page_item.menu-item-has-children:focus > a + ul, .footer .page_item.page_item_has_children.current_page_item > a + ul, .footer .page_item.page_item_has_children:hover > a + ul, .footer .page_item.page_item_has_children:focus > a + ul {
     display: block; }
-
-body {
-  background: #fff; }
-
-.wrapper > header {
-  background-color: #eceff5; }
-
-body > footer {
-  background-color: #cad4e5; }
-  @media screen and (max-width: 992px) {
-    body > footer > aside {
-      padding: 2em 2em; }
-      body > footer > aside address {
-        min-width: 320px; } }
-  @media screen and (min-width: 993px) {
-    body > footer > aside {
-      padding: 4em 4em; }
-      body > footer > aside address {
-        min-width: 450px; } }
-
-#intro {
-  background-color: #e5eaf2; }
-
-#teaser {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out; }
-  @media screen and (min-width: 992px) {
-    #teaser .teaser {
-      margin-left: 2px;
-      background: #fff; }
-      #teaser .teaser:last-child {
-        border-right: 2px solid #fff; } }
-
-#latest {
-  background-color: #dbe2ed; }
-  #latest * {
-    color: #525d70; }
-  #latest .badge {
-    background: #fecc16;
-    font-size: large;
-    padding: .2em .5em;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0; }
-    @media screen and (min-device-width: 768px) and (orientation: landscape) {
-      #latest .badge {
-        margin: 1em -.5em; } }
-    #latest .badge + article {
-      margin-top: 2em; }
-
-#contact {
-  background-color: #e5eaf2; }
-
-.copyright {
-  background: #525d70; }
-  .copyright, .copyright * {
-    color: white; }
 
 /*# sourceMappingURL=my-styles.css.map */

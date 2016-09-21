@@ -124,6 +124,7 @@ img {
  	input, select, textarea{
  		@include appearance(none);	
  		padding: .5em 1em;
+ 		font-size:$rem-base;
  		border: {
  			width: 1px;
  			style:solid;

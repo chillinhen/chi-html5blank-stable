@@ -54,6 +54,9 @@ h1.logo {
 }
 /*** shrink intro ***/
 #intro{
+    @media screen and (max-width:$screen-smallPad){
+        min-height:80vH;
+    }
     @media screen and (min-width:$screen-smallPad){
         @include align-items(flex-start);
         > * {
