@@ -25,6 +25,8 @@
 
 <?php endif; ?>
 </section>
+        <!-- wrapper -->
+        <div class="wrapper">
 <!-- Teaser -->
 <?php get_template_part('partials/teaser'); ?>
 <!-- /Teaser -->
@@ -38,6 +40,8 @@
 <!-- Recommends -->
 <?php get_template_part('partials/recommends'); ?>
 <!-- /Recommends -->
+</div>
+        <!-- end wrapper -->
 <?php get_footer(); ?>
 
 

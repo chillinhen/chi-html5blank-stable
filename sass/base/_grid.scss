@@ -9,7 +9,7 @@
     }
 }
 /*** Flexboxes ***/
-.flexbox .wrapper{
+.flexbox body{
     > header, footer > aside{
         @include base-flex;
     }
@@ -19,7 +19,14 @@
         }
         @media screen and (min-device-width:$screen-smallPad){ 
             height:25vH;
+            @include transition(height 300ms ease-in-out);
             @include align-items(center);
+            &.sticky{
+                @include transition(height 300ms ease-in-out);
+                height:12vH !important;
+                position:fixed;
+                z-index:10;
+            }
             
             > * {
                 @include flex-basis(50%);  
@@ -146,6 +153,27 @@ body > footer {
     > main {
         > section{
             @include outer-container(1024px);
+        }
+    }
+}
+
+/*** Single ***/
+article {
+    body:not(.single) &{
+        padding: $vgrid $hgrid;
+    }
+    body.single &{
+        section{
+            padding: $vgrid $hgrid;
+            @include display(flex);
+            @include flex-direction(row);
+            .gallery-simple {
+                @include flex-basis(40%);
+            }
+            .content{
+                @include flex-basis(60%);
+                padding: 0 $hgrid;
+            }
         }
     }
 }

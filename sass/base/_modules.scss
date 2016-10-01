@@ -18,6 +18,12 @@ h1.logo {
 
         @media screen and (min-device-width:$screen-sm){
             padding:0 12vW;
+            @include transition(all 600ms ease-in-out);
+            .sticky & {
+                padding-top:6vH;
+                padding-bottom:6vH;
+                @include transition(all 600ms ease-in-out);
+            }
         }
     }
 }
@@ -198,9 +204,42 @@ h1.logo {
     }
 }
 /*** Posts ***/
-article {
-    padding: $vgrid $hgrid;
+article{
+    body.single &.category-portfolio{
+        padding-top: 55vH;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+        
+        section {
+            background: $white;
+        }
+    }
 }
+.post-categories{
+    list-style:none;
+    margin:0;
+    padding:0;
+    li {display:inline-block;}
+    a {
+        font-size: .9em;
+        &:before{
+            @include icon-style ("\f292", .5em, 1, 0, 1em);
+        }
+    }
+}
+.gallery-simple{
+    figure{
+        margin:0 0 2em 0;
+    }
+    figcaption{
+        font-size: smaller;
+        text-align: center;
+        padding: .2em 0;
+        color:$dark-color-grey;
+    }
+}
+
 /*** Formular ***/
 .wpcf7{
     .kontakt & {

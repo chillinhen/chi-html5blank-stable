@@ -1,12 +1,11 @@
 body {
     background: $white;
     @extend %reset;
-}
-.wrapper{
     > header{
         background-color: lighten($base-bg_color,2%);
     }
 }
+
 body > footer {
     background-color: $base-color-grey;
     > aside{

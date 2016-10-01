@@ -145,7 +145,7 @@ a{
         color:$dark-color-grey;
         body.home & {color:#fff;}
     }
-    .footer &{
+    .footer &, .post-categories &{
         text-decoration: none;
     }
     &:active, &:focus{

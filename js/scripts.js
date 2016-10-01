@@ -9,9 +9,9 @@
             // If width width is below 600px, switch to the mobile stylesheet
             if (newWindowWidth < 600) {
                 // alles für smartphones
-                
+
             } else {
-                
+
             }
 
         }
@@ -34,6 +34,21 @@
             $(this).toggleClass('show');
             $('.banner-img, .banner-text').toggleClass('shrink');
         });
+        //Sticky Navbar
+        var stickyNavTop = $('body > header').offset().top;
+
+        var stickyNav = function () {
+            var scrollTop = $(window).scrollTop();
+
+            if (scrollTop > stickyNavTop) {
+                $('body > .wrapper > header').addClass('sticky');
+            } else {
+                $('body > .wrapper > header').removeClass('sticky');
+            }
+        };
+
+        stickyNav();
+        $(window).scroll(stickyNav);
 
     });
 
