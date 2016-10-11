@@ -950,7 +950,7 @@ body > footer {
   transition: all 200ms ease-in-out; }
   @media screen and (min-width: 992px) {
     #teaser .teaser {
-      margin-left: 2px;
+      margin: 0 0 4.5rem 2px;
       background: #fff; }
       #teaser .teaser:last-child {
         border-right: 2px solid #fff; } }
@@ -1342,6 +1342,49 @@ body.single article.category-portfolio {
 
 .view-article {
   display: none; }
+
+/*** Modal Boxes ***/
+.modal-box {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none; }
+  .modal-box:target {
+    opacity: 1;
+    pointer-events: auto; }
+  .modal-box > article {
+    min-width: 320px;
+    position: relative;
+    margin: 20vH auto;
+    padding: 0 3em 3em 3em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    overflow: hidden;
+    background: #fff; }
+    @media screen and (min-width: 481px) {
+      .modal-box > article {
+        max-width: 50vW; } }
+  .modal-box .close {
+    color: #fecc16;
+    text-decoration: none;
+    font-size: 2em;
+    display: block;
+    width: 100%;
+    text-align: right; }
+    .modal-box .close span {
+      display: none; }
+    .modal-box .close:hover {
+      cursor: pointer;
+      color: #cad4e5; }
 
 /*** Navigation ***/
 .footer .menu {

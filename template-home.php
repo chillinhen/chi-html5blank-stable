@@ -38,10 +38,10 @@
 <?php get_template_part('partials/call-to-action'); ?>
 <!-- /Call to Action Section -->
 <!-- Recommends -->
-<?php get_template_part('partials/recommends'); ?>
+<?php get_template_part('partials/custom-post','recommends'); ?>
 <!-- /Recommends -->
 </div>
-        <!-- end wrapper -->
+<!-- end wrapper -->
 <?php get_footer(); ?>
 
 

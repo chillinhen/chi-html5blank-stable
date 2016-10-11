@@ -11,6 +11,13 @@
     <!-- /copyright -->
 </footer>
 <!-- /footer -->
+<?php
+if (is_front_page()):
+// Benefits
+get_template_part('partials/custom-post', 'benefits');
+endif;
+?>
+
 
 
 

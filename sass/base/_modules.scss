@@ -342,3 +342,46 @@ article{
 .view-article{
     display:none;
 }
+
+/*** Modal Boxes ***/
+.modal-box {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    @include transition(opacity 400ms ease-in);
+    pointer-events: none;
+
+    &:target {
+        opacity:1;
+        pointer-events: auto;
+    }
+    > article {
+        min-width: 320px;
+        @media screen and (min-width:$screen-xs + 1){max-width: 50vW;}
+        position: relative;
+        margin: 20vH auto;
+        padding: 0 3em 3em 3em;
+        @include border-radius (1em);
+        background: $white;
+    }
+    .close {
+        color: $primary-color;
+        text-decoration: none;
+        font-size: 2em;
+        display:block;
+        width:100%;
+        text-align:right;
+        span{display:none;}
+        
+        &:hover {
+            cursor: pointer;
+            color: $base-color-grey;
+        }
+    }
+}

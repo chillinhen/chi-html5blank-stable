@@ -27,7 +27,7 @@ body > footer {
     @media screen and (min-width:$screen-md){
 
         .teaser {
-            margin-left: $smallgrid;
+            margin:0  0 3 * $paragraph-margin $smallgrid;
             background: #fff;
             &:last-child{
                 border-right: $smallgrid solid $white;
