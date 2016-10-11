@@ -152,6 +152,14 @@ h6 {
   h5, .footer
   h6 {
     display: none; }
+  h1.benefit-title,
+  h2.benefit-title,
+  h3.benefit-title,
+  h4.benefit-title,
+  h5.benefit-title,
+  h6.benefit-title {
+    font-size: 16px;
+    border-bottom: 1px solid currentColor; }
 
 h1 {
   font-size: 1.5em;
@@ -448,7 +456,10 @@ a.btn {
   margin: 2em auto;
   display: block;
   max-width: 60%;
-  text-align: center; }
+  text-align: center;
+  font-weight: 600; }
+  a.btn, a.btn:hover {
+    text-decoration: none; }
 
 button {
   -webkit-appearance: none;
@@ -1357,29 +1368,29 @@ body.single article.category-portfolio {
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
-  pointer-events: none; }
+  pointer-events: none;
+  overflow: auto; }
   .modal-box:target {
     opacity: 1;
     pointer-events: auto; }
   .modal-box > article {
     min-width: 320px;
     position: relative;
-    margin: 20vH auto;
-    padding: 0 3em 3em 3em;
+    margin: 5vH auto;
+    padding: 2em 3em;
     -webkit-border-radius: 1em;
     border-radius: 1em;
     overflow: hidden;
     background: #fff; }
     @media screen and (min-width: 481px) {
       .modal-box > article {
-        max-width: 50vW; } }
+        max-width: 75vW; } }
   .modal-box .close {
     color: #fecc16;
     text-decoration: none;
     font-size: 2em;
-    display: block;
-    width: 100%;
-    text-align: right; }
+    float: right;
+    margin: -.5em 0 0 0; }
     .modal-box .close span {
       display: none; }
     .modal-box .close:hover {

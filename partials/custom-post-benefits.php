@@ -14,15 +14,17 @@ $benefitsQuery = new WP_Query($filter);
             ?>
         <div id="benefit-<?php the_ID(); ?>" class="modal-box" <?php post_class(); ?>>
             <article>
-                <a href="#close" title="close" class="close">
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                    <span><?php _e('schliessen','html5blank');?></span>
-                </a>
                 <?php if (has_post_thumbnail()) : ?>
                 <div class='thumbnail'><?php the_post_thumbnail('medium'); ?></div>
                 <?php endif; ?>
                 <div class="text">
-                    <h3><?php the_title(); ?></h3>
+                    <h3 class="benefit-title">
+                        <?php the_title(); ?>
+                    <a href="#close" title="close" class="close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                    <span><?php _e('schliessen','html5blank');?></span>
+                </a>
+                    </h3>
                     <?php the_content(); ?>
                 </div>
             </article>

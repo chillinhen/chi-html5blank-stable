@@ -356,17 +356,17 @@ article{
     opacity:0;
     @include transition(opacity 400ms ease-in);
     pointer-events: none;
-
+        overflow: auto;
     &:target {
         opacity:1;
         pointer-events: auto;
     }
     > article {
         min-width: 320px;
-        @media screen and (min-width:$screen-xs + 1){max-width: 50vW;}
+        @media screen and (min-width:$screen-xs + 1){max-width: 75vW;}
         position: relative;
-        margin: 20vH auto;
-        padding: 0 3em 3em 3em;
+        margin: 5vH auto;
+        padding: 2em 3em;
         @include border-radius (1em);
         background: $white;
     }
@@ -374,9 +374,8 @@ article{
         color: $primary-color;
         text-decoration: none;
         font-size: 2em;
-        display:block;
-        width:100%;
-        text-align:right;
+        float:right;
+        margin: -.5em 0 0 0;
         span{display:none;}
         
         &:hover {

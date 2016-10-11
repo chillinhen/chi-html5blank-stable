@@ -7,6 +7,8 @@
     display: block;
     max-width: 60%;
     text-align: center;
+    font-weight: 600;
+    &, &:hover{text-decoration:none;}
 }
 @mixin ctaBadge($item) {
     width: $item !important;

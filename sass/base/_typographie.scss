@@ -92,6 +92,10 @@ h6{
     .footer & {
         display:none;
     }
+    &.benefit-title {
+        font-size: $rem-base;
+        border-bottom: 1px solid currentColor;
+    }
 }
 h1 {
     font-size: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
